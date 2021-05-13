@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <div class="tab">
+                    <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'Home')"><img src="images/Pomegranule Bounce.gif"><br>Home</button>
+                    <button class="tablinks" onclick="openCity(event, 'Keyskills')"><img src="images/Pomegranule Bounce.gif"><br>Keyskills</button>
+                    <button class="tablinks" onclick="openCity(event, 'Timeline')"><img src="images/Pomegranule Bounce.gif"><br>Timeline</button>
+                    <button class="tablinks" onclick="openCity(event, 'CV')"><img src="images/Pomegranule Bounce.gif"><br>CV</button>
+                    <button class="tablinks" onclick="openCity(event, 'ContactMe')"><img src="images/Pomegranule Bounce.gif"><br>Contact me!</button>
+                  </div>
+                  
+                  <!-- Tab content -->
+                  <div id="Home" class="tabcontent">
+                    <h3>Eleanor Green</h3>
+                      <div class="row">
+                        <div class="column">
+                            <img src="images/I'm trying.jpg" id="profilePic">
+                        </div>
+                        <div class="column">
+                            <p id="profileContent">A detail oriented and inquisitive apprentice with a real passion for ‘creating something from nothing’, building up projects from scratch. Competent in JavaScript, HTML and CSS, with a hunger for additional languages. Well balanced; able to be a valuable member of a team as well as an efficient independent worker. Professional, organized and reliable, having excellent written and verbal communication skills. With a desire to provide support, motivation and guidance to fellow colleagues.</p>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <div id="Keyskills" class="tabcontent">
+                    <h3>Keyskills</h3>
+                    <p>Paris is the capital of France.</p>
+                  </div>
+                  
+                  <div id="Timeline" class="tabcontent">
+                    <h3>Timeline</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                  </div>
+
+                  <div id="CV" class="tabcontent">
+                    <h3>CV</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                  </div>
+
+                  <div id="ContactMe" class="tabcontent">
+                    <h3>Contact me!</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
