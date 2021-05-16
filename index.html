@@ -8,30 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- This container includes the entire of the webpage. I was trying to use columns like Grace said... -->
     <div class="container">
         <div class="row">
-            <div class="column">
+            <div class="col-12">
+              <!-- These tabs are my substitute for a navigation bar. It allows the user to navigate from page to page without loading a new page. -->
                 <div class="tab">
+                  <fieldset>
                     <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'Home')"><img src="images/Home icon (lights off).gif" id="buttonGifs"><br>Home</button>
                     <button class="tablinks" onclick="openCity(event, 'Keyskills')"><img src="images/Keyskills icon.gif" id="buttonGifs"><br>Keyskills</button>
                     <button class="tablinks" onclick="openCity(event, 'Timeline')"><img src="images/Timeline icon.gif" id="buttonGifs"><br>Timeline</button>
                     <button class="tablinks" onclick="openCity(event, 'CV')"><img src="images/CV icon.gif" id="buttonGifs"><br>CV</button>
                     <button class="tablinks" onclick="openCity(event, 'ContactMe')"><img src="images/Contact me icon.gif" id="buttonGifs"><br>Contact me!</button>
+                  </fieldset>
                   </div>
                   
-                  <!-- Tab content -->
-                  <div id="Home" class="tabcontent">
-                    <h3>Eleanor Green</h3>
-                      <div class="row">
-                        <div class="column">
+                  <!-- Tab content. This is the content that I cannot get ot align properly. It's been hours and I wish for the sweet embrace of death. Once I get past this bit, I can just copy and paste for the other pages. Thank you. c:-->
+                  <fieldset>
+                    <legend><h2>Eleanor Green</h2></legend>
+                  <div id="Home" class="tabcontent">                  
+                      <div class="row" id="profile">
+                        <div class="col-10">
                             <img src="images/I'm trying.jpg" id="profilePic">
                         </div>
-                        <div class="column">
-                            <p id="profileContent">A detail oriented and inquisitive apprentice with a real passion for ‘creating something from nothing’, building up projects from scratch. Competent in JavaScript, HTML and CSS, with a hunger for additional languages. Well balanced; able to be a valuable member of a team as well as an efficient independent worker. Professional, organized and reliable, having excellent written and verbal communication skills. With a desire to provide support, motivation and guidance to fellow colleagues.</p>
+                        <div class="col-8">
+                            <p id="profileText">A detail oriented and inquisitive apprentice with a real passion for ‘creating something from nothing’, building up projects from scratch. Competent in JavaScript, HTML and CSS, with a hunger for additional languages. Well balanced; able to be a valuable member of a team as well as an efficient independent worker. Professional, organized and reliable, having excellent written and verbal communication skills. With a desire to provide support, motivation and guidance to fellow colleagues.</p>
+                          </div>
                         </div>
                     </div>
                   </div>
                   
+                  <!-- Everything below here are the other pages. These pages are hidden until the tab is clicked on. Then, with sme magic (and a little bit of Javascript), they reappear as if they are a different page! Technology is amazing! When it works. -->
                   <div id="Keyskills" class="tabcontent">
                     <h3>Keyskills</h3>
                     <p>Paris is the capital of France.</p>
@@ -51,6 +58,7 @@
                     <h3>Contact me!</h3>
                     <p>Tokyo is the capital of Japan.</p>
                   </div>
+                </fieldset>
             </div>
         </div>
     </div>

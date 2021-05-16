@@ -4,23 +4,32 @@
     src: url(others/minecraft-font/MinecraftRegular-Bmg3.otf);
 }
 
-body, html, button {
+body, html {
     font-family: "MinecraftRegular-Bmg3";
     background-color: #140c42;
     color: #a2a8f7;
     margin: 5%;
-    margin-top: 0%;
+    margin-top: 2%;
+}
+
+button {
+  font-size: 90%;
+  font-family: "MinecraftRegular-Bmg3";
+  color: #a2a8f7;
 }
 
 #buttonGifs {
-  width: 100%;
+  width: 80%;
 }
+
+
 
 
 /* Style the tab */
 .tab {
     overflow: hidden;
     background-color: #140c42;
+    width: 100%;
   }
   
   /* Style the buttons that are used to open the tab content */
@@ -28,28 +37,35 @@ body, html, button {
     background-color: inherit;
     float: left;
     outline: none;
-    cursor: pointer;
-    padding: 16px 16px;
-    margin: 2%;
+    cursor: pointer;    
+    margin: 0%;
+    padding: 3%;
     transition: 0.3s;
-    width: 16%;
+    width: 20%;
+    border-width: 3%;
+    border-color: transparent;
+    font-size: 70%;
   }
   
   /* Adds a border and border-width of buttons on hover */
   .tab button:hover {
-    border: 0.4em #a2a8f7;
-    display: inherit;
+    border-bottom-width: 0.4em;
+    border-bottom-color: #a2a8f7;    
   }
   
   /* Create an active/current tablink class */
   .tab button.active {
-    border: 0.2em #a2a8f7;
+    border-bottom-width: 0.4em;
+    border-bottom-color: #2822ce; 
   }
   
   /* Style the tab content */
   .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: none;
+    /* margin-bottom: 10%; */
+    width: 80%;
+    text-align: justify;
   }
 
   .tabcontent {
@@ -62,17 +78,62 @@ body, html, button {
     to {opacity: 1;}
   }
 
+/* #picColumn {
+  box-sizing: border-box;
+  width: 30%;
+  float: left;
+} */
+
+
+/* This is the id of the img tag itself. */
   #profilePic {
-      width: 30%;
+      box-sizing: border-box;
+      width: 50%;
       float: left;
-      align-content: center;
-      margin: 1%;
+      /* padding-left: 15%; */
+      /* padding-right: 5%; */
   }
 
-  #profileContent {
-      width: 60%;
-      float: right;
-      font-size: 90%;
+  /* This is the id for the p tag itself. */
+  #profileText {
+      box-sizing: border-box;
+      width: 100%;    
       text-align: justify;
-      align-items: center;
+      font-size: 80%;
+      float: right;
+      justify-content: right;
+      /* padding-left: 5%; */
+      /* padding-bottom: 10%; */
   }
+
+  /* Trying to make the columns work. Okay, it worked sorta. Please find a way to make the columns not shift all the way over to the left.*/
+  /* These are specific measurements for the different columns. But they still didn't separate themselves out properly. */
+  
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Trying to make the website responsive for a laptop and/or phone. */
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
