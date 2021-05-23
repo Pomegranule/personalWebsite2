@@ -18,122 +18,161 @@ button {
   color: #a2a8f7;
 }
 
-#buttonGifs {
+.tabGifs {
   width: 80%;
 }
 
-
+.container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
 
 
 /* Style the tab */
 .tab {
+  overflow: hidden;
+  background-color: #140c42;
+  width: 100%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  outline: none;
+  cursor: pointer;    
+  margin: 0%;
+  padding: 3%;
+  transition: 0.3s;
+  width: 20%;
+  border-width: 3%;
+  border-color: transparent;
+  font-size: 70%;
+}
+
+/* Adds a border and border-width of buttons on hover */
+.tab button:hover {
+  border-bottom-width: 0.4em;
+  border-bottom-color: #a2a8f7;    
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  border-bottom-width: 0.4em;
+  border-bottom-color: #2822ce; 
+}
+
+/* Style the tab content */
+
+#profile {
+  column-width: 450px;
+}
+
+img {
+  width: 20em;
+}
+
+#text {
+  flex-grow: 2;
+  flex-shrink: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  text-justify: distribute;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Trying to make the website responsive for a laptop and/or phone. */
+
+/* iPads/tablets. */
+@media screen and (max-width: 768px) {
+  html, body {
+    font-family: "MinecraftRegular-Bmg3";
+    background-color: #140c42;
+    color: #a2a8f7;
+    max-width: 768px;
+    max-height: 1024px;
+    height: 700px;
+    width: 1000px;
+
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    padding-right: 10em;
+  }
+
+  img {
+    width: 18em;
+  
+  }
+
+  #text {
+    flex-grow: 2;
+    flex-shrink: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+    width:80%;
+  }
+
+  button {
+    font-size: 90%;
+    font-family: "MinecraftRegular-Bmg3";
+    color: #a2a8f7;
+  }
+  
+  .tabGifs {
+    width: 80%;
+  }
+    
+  /* Style the tab */
+  .tab {
     overflow: hidden;
     background-color: #140c42;
     width: 100%;
   }
-  
-  /* Style the buttons that are used to open the tab content */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    outline: none;
-    cursor: pointer;    
-    margin: 0%;
-    padding: 3%;
-    transition: 0.3s;
-    width: 20%;
-    border-width: 3%;
-    border-color: transparent;
-    font-size: 70%;
-  }
-  
-  /* Adds a border and border-width of buttons on hover */
-  .tab button:hover {
-    border-bottom-width: 0.4em;
-    border-bottom-color: #a2a8f7;    
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
-    border-bottom-width: 0.4em;
-    border-bottom-color: #2822ce; 
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: none;
-    /* margin-bottom: 10%; */
-    /* width: 80%; */
-    text-align: justify;
-  }
-
-  .tabcontent {
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
-  }
-  
-  /* Go from zero to full opacity */
-  @keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-
-/* #picColumn {
-  box-sizing: border-box;
-  width: 30%;
-  float: left;
-} */
-
-
-/* This is the id of the img tag itself. */
-  #profilePic {
-      box-sizing: border-box;
-      width: 50%;
-      float: left;
-      /* padding-left: 15%; */
-      /* padding-right: 5%; */
-  }
-
-  /* This is the id for the p tag itself. */
-  #profileText {
-      box-sizing: border-box;
-      width: 100%;    
-      text-align: justify;
-      font-size: 80%;
-      float: right;
-      justify-content: right;
-      /* padding-left: 5%; */
-      /* padding-bottom: 10%; */
-  }
-
-  /* Trying to make the columns work. Okay, it worked sorta. Please find a way to make the columns not shift all the way over to the left.*/
-  /* These are specific measurements for the different columns. But they still didn't separate themselves out properly. */
-  
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-/* Trying to make the website responsive for a laptop and/or phone. */
-
-/* On screens that are 992px wide or less, go from four columns to two columns */
-@media screen and (max-width: 992px) {
-  .column {
-    width: 50%;
-  }
 }
 
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+/* Smaller tablets. */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
+  }
+}
+
+/* This is for the iPohne X,  however, I think it works on other phones too. */
+@media screen and (max-width: 375px) {
+  html, body {
+    font-family: "MinecraftRegular-Bmg3";
+    background-color: #140c42;
+    color: #a2a8f7;
+    max-width: 375px;
+    max-height: 812px;
+
+}
+  
+  .column {
+    width: 300px;
+    padding-left: 5px;
+  }
+
+  img {
+    width: 20em;
+  
   }
 }
